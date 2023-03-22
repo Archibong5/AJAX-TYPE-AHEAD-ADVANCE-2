@@ -1,0 +1,74 @@
+html{
+  box-sizing: border-box;
+  background: #47B5FF;
+  font-size: 20px;
+  margin: 0;
+}
+
+.search-form{
+  margin: 100px auto;
+  max-width: 500px;
+}
+
+.search{
+  width: 120%;
+  padding: 30px;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  left: -15%;
+  border: 10px solid rgba(255,255,255,1);
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px #47B5FF;
+  z-index: 2;
+  text-transform: capitalize;
+  outline-color:  rgba(0,0,250,0.6);
+  background: black;
+}
+
+.search:focus{
+  color:white;
+}
+
+.search::placeholder{
+  color: white;
+  text-shadow: 1px 1px 5px #47B5FF;
+
+}
+
+.suggestions{
+  margin: 0;
+  padding: 0;
+  /* perspective: 20px; */
+}
+
+.suggestions li{
+  background: white;
+  border-bottom: 1px solid rgba(50,100,250,0.6);
+  list-style: none;
+  padding: 20px;
+  text-transform: capitalize;
+  box-shadow: 3px 3px 10px rgba(0,0,0,1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestions li:nth-child(odd){
+  transform: perspective(100px) rotateX(-3deg) translateY(-3px);
+  background: linear-gradient(to top, white, #C4DDFF)
+}
+
+
+.suggestions li:nth-child(even){
+  transform: perspective(100px) rotateX(3deg) translateY(-4px);
+  background: linear-gradient(to bottom, white, #C4DDFF)
+
+}
+
+.hl{
+  background: #47B5FF;
+}
+
+span.population{
+  font-size: 15px;
+}
